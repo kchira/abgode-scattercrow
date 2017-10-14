@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Abgode and Scattercrow test page</title>
+
+	<script src="abgode.js"></script>
+	<script src="scattercrow.js"></script>
+	<script>
+	function echo(s) {
+		document.write('<div>'+s+'</div>');
+	}
+	function testAbgode(str) {
+		echo(str+' → '+uniToAbgode(str));
+	}
+	window.onload = function(){
+		echo('<h2>Unicode to Abgode:</h2>');
+		['☺', '𐁆', '🈚️'].map(function(c){testAbgode(c);});
+	}
+	</script>
+</head>
+<body>
+</body>
+</html>
