@@ -1,6 +1,8 @@
 // Copyright Ko Chira 2007-2017
 // Released into the public domain under Creative Commons CC0
 
+// SMALL EDIT
+
 window.scattercrow = '!#$%()*+,-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]abcdefghijklmnopqrstuvwxyz{|}';
 
 function uniToScattercrow(asc) {

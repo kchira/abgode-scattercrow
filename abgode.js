@@ -1,5 +1,6 @@
 // Copyright Ko Chira 2007-2017
 // Released into the public domain under Creative Commons CC0
+// SMALL CHANGE
 
 function uniToAbgode(asc) {
 	var abg = '';
