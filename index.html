@@ -6,6 +6,7 @@
 
 	<title>Abgode and Scattercrow test page</title>
 
+    <script src="codepoint.js"></script>
 	<script src="abgode.js"></script>
 	<script src="scattercrow.js"></script>
 	<script>
@@ -13,11 +14,28 @@
 		document.write('<div>'+s+'</div>');
 	}
 	function testAbgode(str) {
-		echo(str+' → '+uniToAbgode(str));
+        var ab = uniToAbgode(str);
+		echo('A : ' + str+' → '+ab + ' → ' + abgToUnicode(ab));
+//        var scatter = uniToScattercrow(str);
+//        echo('S : ' + str+' → '+scatter + ' → '+scattercrowToUni(scatter));
 	}
+    function testScatterCrow(str) {
+        var scatter = uniToScattercrow(str);
+        echo('S : ' + str+' → '+scatter + ' → '+scattercrowToUni(scatter));
+    }
+    function toUni(str) {
+        var bc = abgToUnicode(str);
+        echo(str + ' → ' + bc);
+    }
 	window.onload = function(){
-		echo('<h2>Unicode to Abgode:</h2>');
-		['☺', '𐁆', '🔒', '🈚️', '\b'].map(function(c){testAbgode(c);});
+		echo('<h2>Unicode to Abgode :</h2>');
+        echo('<h3>Unicode → Abgode → Unicode : <h3>');
+		['☺', '𐁆', '🔒', '🈚️','🈚️🈚️', '􏀀', '􏒑', 'PQ', 'wasd', ' ', '􏌳'].map(function(c){testAbgode(c);});
+        echo('<br>');
+        echo('<h3>Unicode → ScatterCrow → Unicode : <h3>');
+        ['☺', '𐁆', '🔒', '🈚️', '􏀀', '􏒑', 'PQ', '􏌳'].map(function(c){testScatterCrow(c);});
+        echo('<br>');
+        ['BAAEg', 'BPFBc', 'BPCBk', , 'NOBk', 'POAp'].map(function(c){toUni(c);});
 	}
 	</script>
 </head>
