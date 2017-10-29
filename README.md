@@ -1,6 +1,6 @@
 # abgode-scattercrow
 
-//--------------------------OVERVIEW---------------------------------//
+## Overview
 Abgode and Scattercrow are both encoding schemes for translating uni
 -code into subsets of ascii.
 
@@ -15,22 +15,22 @@ Scattercrow is more readable and for this can be considered more con
 of a token and a lowercase letter to indicate its end.  Also, it uses 
 less characters than Abgode making is more efficient as well.
 
-//----------------------Functions Explanations-----------------------//
+## Function Explanations
 
-UniToAbgode()
+__UniToAbgode()__
 - Certain characters [a-z0-9] pass through unchanged.
 - Certain other characters are represented by uppercase letters.
 - All other character's unicode points are encoded in hexadecimal, but 
-  using uppercase A to P instead of the usual 1 to F. A lowercase cha-
-  racter is used to mark the end of the sequence.
+    using uppercase A to P instead of the usual 1 to F. A lowercase cha-
+    racter is used to mark the end of the sequence.
 
-AbgToUnicode()
+__AbgToUnicode()__
 - Certain characters [a-z0-9] pass through unchanged.
 - Certain uppercase letters are converted to special characters.
 - All other characters' A-P code points are decoded back to unicode.
 - If none of the conditions are met, the something is wrong!
 
-UniToScattercrow()
+__UniToScattercrow()__
 - Certain characters pass through unchanged.
 - White spaces are converted to underscores.
 - Single qutes are converted to carrots.
@@ -40,7 +40,7 @@ UniToScattercrow()
   is used to mark the start of a sequence.  A lowercase character is
   used to mark the end of the sequence.
 
-ScattercrowToUni()
+__ScattercrowToUni()__
 - Certain characters (including spaces) pass through unchanged.
 - Underscores are converted to white spaces
 - Carrots are converted to single quotes
