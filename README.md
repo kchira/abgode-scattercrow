@@ -1,15 +1,16 @@
 # abgode-scattercrow
 
 ## Overview
-    Abgode and Scattercrow are both encoding schemes for translating uni
--code into subsets of ascii.
-    Abgode is useful in the sense that no unncecssary extra characters are 
+
+Abgode and Scattercrow are both encoding schemes for translating unicode into subsets of ascii.
+
+Abgode is useful in the sense that no unncecssary extra characters are 
 incorporated into the scheme, only lowercase and uppercase letters, a 
 single quote, hyphen, forward slash, and numbers zero through nine.  
 Abgode has a more complex encoding standard than scattercrow, making it
 more difficult to break the encryption.
-    Scattercrow is more readable and for this can be considered more con
--venient since it incorporates ampersands to identify the starting point 
+
+Scattercrow is more readable and for this can be considered more convenient since it incorporates ampersands to identify the starting point 
 of a token and a lowercase letter to indicate its end.  Also, it uses 
 less characters than Abgode making is more efficient as well.
 
