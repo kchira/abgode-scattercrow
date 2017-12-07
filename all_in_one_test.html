@@ -32,7 +32,8 @@
         <!-- container, elements, style, and layout are specified as part of the object passed to cytoscape during construction. -->
         <script>
             
-            (function(){
+            (function() {
+                
                 function abgode(str) {
                     var ab = uniToAbgode(str);
                     return ab;
@@ -43,12 +44,12 @@
                     return ab;
                 }
 
-                scatter(str) {
+                function scattercrow(str) {
                     var sc = uniToScattercrow(str);
                     return sc;
-                };
+                }
 
-                revertScatter(str) {
+                function revertScatter(str) {
                     var sc = scattercrowToUni(str);
                     return sc;
                 }
@@ -63,7 +64,7 @@
             var f = revertAbg(c);
             
             // Scattercrow Variables
-            var g = scatter('Appointment'); // CALL TO SCATTER FUNCTION CAUSING FAILURE
+            var g = scattercrow('Appointment'); // CALL TO SCATTER FUNCTION CAUSING FAILURE
             
             
             
