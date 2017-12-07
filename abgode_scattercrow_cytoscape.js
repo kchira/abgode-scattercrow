@@ -80,6 +80,7 @@ function abgToUnicode(abg) {
 	return asc;
 }
 
+window.scattercrow = '!#$%()*+,-./0123456789:;=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]abcdefghijklmnopqrstuvwxyz{|}';
 
 function uniToScattercrow(asc) {
 	var abg = '';
