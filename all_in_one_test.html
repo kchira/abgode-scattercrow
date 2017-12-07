@@ -31,25 +31,27 @@
         <!-- { data: { id: 'ab', source: 'a', target: 'b' } } is an edge between nodes a and b. -->
         <!-- container, elements, style, and layout are specified as part of the object passed to cytoscape during construction. -->
         <script>
-            function abgode(str) {
-                var ab = uniToAbgode(str);
-                return ab;
-            }
             
-            function revertAbg(str) {
-                var ab = abgToUnicode(str);
-                return ab;
-            }
-            
-            function scattercrow(str) {
-                var sc = uniToScattercrow(str);
-                return sc;
-            }
-            
-            function revertScatter(str) {
-                var sc = scattercrowToUni(str);
-                return sc;
-            }
+            (function(){
+                function abgode(str) {
+                    var ab = uniToAbgode(str);
+                    return ab;
+                }
+
+                function revertAbg(str) {
+                    var ab = abgToUnicode(str);
+                    return ab;
+                }
+
+                scatter(str) {
+                    var sc = uniToScattercrow(str);
+                    return sc;
+                };
+
+                revertScatter(str) {
+                    var sc = scattercrowToUni(str);
+                    return sc;
+                }
             
             // Abgode Variables
             var a = abgode('Email');
@@ -61,7 +63,9 @@
             var f = revertAbg(c);
             
             // Scattercrow Variables
-            var g = scattercrow('Appointment'); // CALL TO SCATTER FUNCTION CAUSING FAILURE
+            var g = scatter('Appointment'); // CALL TO SCATTER FUNCTION CAUSING FAILURE
+            
+            
             
             var cy = cytoscape({
                 container: document.getElementById('cy'),
@@ -126,6 +130,9 @@
                 }
                 
             });
+                
+            })();
+            
         </script>
         
     </body>
