@@ -46,12 +46,22 @@
                 return sc;
             }
             
+            function revertScatter(str) {
+                var sc = scattercrowToUni(str);
+                return sc;
+            }
+            
+            // Abgode Variables
             var a = abgode('Email');
             var b = abgode('Contact');
             var c = abgode('Cold Call'); 
+            // Reverted Abgode Variables
             var d = revertAbg(a);
             var e = revertAbg(b);
             var f = revertAbg(c);
+            
+            // Scattercrow Variables
+            var g = scattercrow('Appointment'); // CALL TO SCATTER FUNCTION CAUSING FAILURE
             
             var cy = cytoscape({
                 container: document.getElementById('cy'),
@@ -63,6 +73,8 @@
                     { data: { id: d } },
                     { data: { id: e } },
                     { data: { id: f } },
+                    // ADDED SCATTER NODE
+                    { data: { id: g } },
                     // edges
                     {
                         data: {
